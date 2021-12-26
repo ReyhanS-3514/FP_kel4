@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 
 namespace FP_kel4
 {
@@ -98,6 +99,26 @@ namespace FP_kel4
         private void ServiceCb_SelectionChangeCommitted(object sender, EventArgs e)
         {
             GetServiceData();
+        }
+        int n = 0, Grdtotal = 0;
+        private void SaveBtn_Click(object sender, EventArgs e)
+        {
+            if (PriceTb.Text=="")
+            {
+                MessageBox.Show("Pilih Servis");
+            }
+            else
+            {
+                DataGridViewRow newRow = new DataGridViewRow();
+                newRow.CreateCells(ServiceDGV);
+                newRow.Cells[0].Value = n + 1;
+                newRow.Cells[1].Value = ServiceCb.SelectedValue.ToString();
+                newRow.Cells[2].Value = PriceTb.Text;
+                ServiceDGV.Rows.Add(newRow);
+                n++;
+                Grdtotal = Grdtotal + Convert.ToInt32(PriceTb.Text);
+                  
+            }
         }
     }
 }
