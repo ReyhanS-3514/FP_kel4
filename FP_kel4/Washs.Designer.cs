@@ -36,12 +36,19 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label13 = new System.Windows.Forms.Label();
             this.ServiceDGV = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.ENamelbl = new System.Windows.Forms.Label();
+            this.ServiceCb = new System.Windows.Forms.ComboBox();
             this.DeleteBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.SaveBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.Totalbl = new System.Windows.Forms.Label();
             this.CustNameCb = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.PriceTb = new System.Windows.Forms.TextBox();
@@ -64,13 +71,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.ServiceCb = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label15 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ServiceDGV)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -164,18 +164,33 @@
             this.ServiceDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.ServiceDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Servis";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Harga";
+            this.Column3.Name = "Column3";
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.label15);
             this.panel3.Controls.Add(this.dateTimePicker1);
-            this.panel3.Controls.Add(this.label14);
+            this.panel3.Controls.Add(this.ENamelbl);
             this.panel3.Controls.Add(this.ServiceCb);
             this.panel3.Controls.Add(this.DeleteBtn);
             this.panel3.Controls.Add(this.SaveBtn);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.Totalbl);
             this.panel3.Controls.Add(this.CustNameCb);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.PriceTb);
@@ -189,6 +204,52 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1047, 606);
             this.panel3.TabIndex = 1;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Crimson;
+            this.label15.Location = new System.Drawing.Point(136, 141);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(55, 25);
+            this.label15.TabIndex = 20;
+            this.label15.Text = "Date";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(220, 141);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(127, 27);
+            this.dateTimePicker1.TabIndex = 19;
+            // 
+            // ENamelbl
+            // 
+            this.ENamelbl.AutoSize = true;
+            this.ENamelbl.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ENamelbl.ForeColor = System.Drawing.Color.Crimson;
+            this.ENamelbl.Location = new System.Drawing.Point(91, 56);
+            this.ENamelbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ENamelbl.Name = "ENamelbl";
+            this.ENamelbl.Size = new System.Drawing.Size(172, 27);
+            this.ENamelbl.TabIndex = 18;
+            this.ENamelbl.Text = "Employee Name";
+            // 
+            // ServiceCb
+            // 
+            this.ServiceCb.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ServiceCb.ForeColor = System.Drawing.Color.Crimson;
+            this.ServiceCb.FormattingEnabled = true;
+            this.ServiceCb.Location = new System.Drawing.Point(287, 226);
+            this.ServiceCb.Margin = new System.Windows.Forms.Padding(2);
+            this.ServiceCb.Name = "ServiceCb";
+            this.ServiceCb.Size = new System.Drawing.Size(173, 31);
+            this.ServiceCb.TabIndex = 17;
+            this.ServiceCb.Text = "Service";
+            this.ServiceCb.SelectionChangeCommitted += new System.EventHandler(this.ServiceCb_SelectionChangeCommitted);
             // 
             // DeleteBtn
             // 
@@ -262,17 +323,17 @@
             this.label12.TabIndex = 12;
             this.label12.Text = "Wash Your Car";
             // 
-            // label11
+            // Totalbl
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Crimson;
-            this.label11.Location = new System.Drawing.Point(736, 503);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(89, 27);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "Amount";
+            this.Totalbl.AutoSize = true;
+            this.Totalbl.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Totalbl.ForeColor = System.Drawing.Color.Crimson;
+            this.Totalbl.Location = new System.Drawing.Point(736, 503);
+            this.Totalbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Totalbl.Name = "Totalbl";
+            this.Totalbl.Size = new System.Drawing.Size(89, 27);
+            this.Totalbl.TabIndex = 11;
+            this.Totalbl.Text = "Amount";
             // 
             // CustNameCb
             // 
@@ -531,67 +592,6 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "Services";
             // 
-            // ServiceCb
-            // 
-            this.ServiceCb.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ServiceCb.ForeColor = System.Drawing.Color.Crimson;
-            this.ServiceCb.FormattingEnabled = true;
-            this.ServiceCb.Location = new System.Drawing.Point(287, 226);
-            this.ServiceCb.Margin = new System.Windows.Forms.Padding(2);
-            this.ServiceCb.Name = "ServiceCb";
-            this.ServiceCb.Size = new System.Drawing.Size(173, 31);
-            this.ServiceCb.TabIndex = 17;
-            this.ServiceCb.Text = "Service";
-            this.ServiceCb.SelectionChangeCommitted += new System.EventHandler(this.ServiceCb_SelectionChangeCommitted);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Crimson;
-            this.label14.Location = new System.Drawing.Point(91, 56);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(172, 27);
-            this.label14.TabIndex = 18;
-            this.label14.Text = "Employee Name";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(220, 141);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(127, 27);
-            this.dateTimePicker1.TabIndex = 19;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Crimson;
-            this.label15.Location = new System.Drawing.Point(136, 141);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(55, 25);
-            this.label15.TabIndex = 20;
-            this.label15.Text = "Date";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Servis";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Harga";
-            this.Column3.Name = "Column3";
-            // 
             // Washs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -630,7 +630,7 @@
         private Bunifu.Framework.UI.BunifuThinButton2 SaveBtn;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label Totalbl;
         private System.Windows.Forms.ComboBox CustNameCb;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox PriceTb;
@@ -655,7 +655,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label ENamelbl;
         private System.Windows.Forms.ComboBox ServiceCb;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

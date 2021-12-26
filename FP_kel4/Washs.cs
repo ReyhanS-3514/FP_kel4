@@ -117,7 +117,7 @@ namespace FP_kel4
                 ServiceDGV.Rows.Add(newRow);
                 n++;
                 Grdtotal = Grdtotal + Convert.ToInt32(PriceTb.Text);
-                  
+                Totalbl.Text = "Rp." + Grdtotal;
             }
         }
     }
