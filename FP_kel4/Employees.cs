@@ -104,7 +104,7 @@ namespace FP_kel4
             else
             {
                 Con.Open();
-                SqlCommand cmd = new SqlCommand("delete from EmployeeTbl where EId=@EmID", Con);
+                SqlCommand cmd = new SqlCommand("delete from EmployeeTbl where EId=@EmId", Con);
                 cmd.Parameters.AddWithValue("@EmId", Key);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Employee Dihapus");

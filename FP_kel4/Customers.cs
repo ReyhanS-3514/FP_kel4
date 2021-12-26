@@ -119,7 +119,7 @@ namespace FP_kel4
             else
             {
                 Con.Open();
-                SqlCommand cmd = new SqlCommand("delete from CustomerTbl where CId=@CuID", Con);
+                SqlCommand cmd = new SqlCommand("delete from CustomerTbl where CId=@CuId", Con);
                 cmd.Parameters.AddWithValue("@CuId", Key);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Customer Dihapus");
