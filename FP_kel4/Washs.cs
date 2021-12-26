@@ -19,6 +19,7 @@ namespace FP_kel4
             InitializeComponent();
             FillCust();
             FillServices();
+            ENamelbl.Text = Logins.Username;
         }
 
         private void label13_Click(object sender, EventArgs e)
@@ -139,6 +140,18 @@ namespace FP_kel4
                     MessageBox.Show(Ex.Message);
                 }
             }
+        }
+
+        private void ENamelbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            Logins Obj = new Logins();
+            Obj.Show();
+            this.Hide();
         }
 
         private void SaveBtn_Click(object sender, EventArgs e)

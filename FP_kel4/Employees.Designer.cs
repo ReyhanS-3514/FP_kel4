@@ -31,13 +31,11 @@ namespace FP_kel4
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employees));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -49,6 +47,8 @@ namespace FP_kel4
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.PassTb = new System.Windows.Forms.TextBox();
             this.DeleteBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.EditBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.SaveBtn = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -69,7 +69,6 @@ namespace FP_kel4
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -95,8 +94,6 @@ namespace FP_kel4
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel2.Controls.Add(this.pictureBox7);
-            this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.pictureBox6);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.pictureBox5);
@@ -112,29 +109,6 @@ namespace FP_kel4
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(177, 620);
             this.panel2.TabIndex = 0;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(10, 382);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(26, 26);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 11;
-            this.pictureBox7.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Gold;
-            this.label8.Location = new System.Drawing.Point(40, 383);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 27);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Finance";
             // 
             // pictureBox6
             // 
@@ -158,6 +132,7 @@ namespace FP_kel4
             this.label7.Size = new System.Drawing.Size(81, 27);
             this.label7.TabIndex = 8;
             this.label7.Text = "Logout";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // pictureBox5
             // 
@@ -181,6 +156,7 @@ namespace FP_kel4
             this.label6.Size = new System.Drawing.Size(95, 27);
             this.label6.TabIndex = 6;
             this.label6.Text = "Services";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // pictureBox4
             // 
@@ -204,6 +180,7 @@ namespace FP_kel4
             this.label5.Size = new System.Drawing.Size(118, 27);
             this.label5.TabIndex = 4;
             this.label5.Text = "Customers";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // pictureBox3
             // 
@@ -254,6 +231,8 @@ namespace FP_kel4
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.label14);
+            this.panel3.Controls.Add(this.PassTb);
             this.panel3.Controls.Add(this.DeleteBtn);
             this.panel3.Controls.Add(this.EditBtn);
             this.panel3.Controls.Add(this.SaveBtn);
@@ -274,6 +253,28 @@ namespace FP_kel4
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1047, 606);
             this.panel3.TabIndex = 1;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Crimson;
+            this.label14.Location = new System.Drawing.Point(583, 103);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(109, 27);
+            this.label14.TabIndex = 18;
+            this.label14.Text = "Password";
+            // 
+            // PassTb
+            // 
+            this.PassTb.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PassTb.Location = new System.Drawing.Point(588, 132);
+            this.PassTb.Margin = new System.Windows.Forms.Padding(2);
+            this.PassTb.Name = "PassTb";
+            this.PassTb.Size = new System.Drawing.Size(161, 30);
+            this.PassTb.TabIndex = 17;
+            this.PassTb.TextChanged += new System.EventHandler(this.PassTb_TextChanged);
             // 
             // DeleteBtn
             // 
@@ -376,31 +377,31 @@ namespace FP_kel4
             // 
             // EmployeeDGV
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.EmployeeDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.EmployeeDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.EmployeeDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.EmployeeDGV.BackgroundColor = System.Drawing.Color.White;
             this.EmployeeDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.EmployeeDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.EmployeeDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EmployeeDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EmployeeDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.EmployeeDGV.ColumnHeadersHeight = 27;
             this.EmployeeDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.EmployeeDGV.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.EmployeeDGV.DefaultCellStyle = dataGridViewCellStyle3;
             this.EmployeeDGV.EnableHeadersVisualStyles = false;
             this.EmployeeDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.EmployeeDGV.Location = new System.Drawing.Point(13, 44);
@@ -450,7 +451,7 @@ namespace FP_kel4
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Crimson;
-            this.label11.Location = new System.Drawing.Point(778, 102);
+            this.label11.Location = new System.Drawing.Point(827, 102);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(81, 27);
@@ -460,7 +461,7 @@ namespace FP_kel4
             // EAddTb
             // 
             this.EAddTb.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EAddTb.Location = new System.Drawing.Point(783, 131);
+            this.EAddTb.Location = new System.Drawing.Point(832, 131);
             this.EAddTb.Margin = new System.Windows.Forms.Padding(2);
             this.EAddTb.Multiline = true;
             this.EAddTb.Name = "EAddTb";
@@ -475,7 +476,7 @@ namespace FP_kel4
             this.EGenCb.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.EGenCb.Location = new System.Drawing.Point(493, 130);
+            this.EGenCb.Location = new System.Drawing.Point(434, 131);
             this.EGenCb.Margin = new System.Windows.Forms.Padding(2);
             this.EGenCb.Name = "EGenCb";
             this.EGenCb.Size = new System.Drawing.Size(118, 31);
@@ -488,7 +489,7 @@ namespace FP_kel4
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Crimson;
-            this.label10.Location = new System.Drawing.Point(282, 102);
+            this.label10.Location = new System.Drawing.Point(253, 102);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 27);
@@ -498,7 +499,7 @@ namespace FP_kel4
             // EPhoneTb
             // 
             this.EPhoneTb.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EPhoneTb.Location = new System.Drawing.Point(287, 131);
+            this.EPhoneTb.Location = new System.Drawing.Point(258, 131);
             this.EPhoneTb.Margin = new System.Windows.Forms.Padding(2);
             this.EPhoneTb.Name = "EPhoneTb";
             this.EPhoneTb.Size = new System.Drawing.Size(161, 30);
@@ -509,7 +510,7 @@ namespace FP_kel4
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Crimson;
-            this.label9.Location = new System.Drawing.Point(91, 102);
+            this.label9.Location = new System.Drawing.Point(77, 102);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(71, 27);
@@ -519,7 +520,7 @@ namespace FP_kel4
             // ENameTb
             // 
             this.ENameTb.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ENameTb.Location = new System.Drawing.Point(96, 131);
+            this.ENameTb.Location = new System.Drawing.Point(82, 131);
             this.ENameTb.Margin = new System.Windows.Forms.Padding(2);
             this.ENameTb.Name = "ENameTb";
             this.ENameTb.Size = new System.Drawing.Size(161, 30);
@@ -572,7 +573,6 @@ namespace FP_kel4
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -591,8 +591,6 @@ namespace FP_kel4
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox5;
@@ -622,5 +620,7 @@ namespace FP_kel4
         private Bunifu.Framework.UI.BunifuThinButton2 DeleteBtn;
         private Bunifu.Framework.UI.BunifuThinButton2 EditBtn;
         private Bunifu.Framework.UI.BunifuThinButton2 SaveBtn;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox PassTb;
     }
 }

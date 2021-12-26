@@ -35,9 +35,9 @@ namespace FP_kel4
             this.panel3 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.CPhoneTb = new System.Windows.Forms.TextBox();
+            this.PasswordTb = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.CNameTb = new System.Windows.Forms.TextBox();
+            this.UNameTb = new System.Windows.Forms.TextBox();
             this.SaveBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -97,15 +97,15 @@ namespace FP_kel4
             this.label10.Text = "Password";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
-            // CPhoneTb
+            // PasswordTb
             // 
-            this.CPhoneTb.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CPhoneTb.Location = new System.Drawing.Point(462, 300);
-            this.CPhoneTb.Margin = new System.Windows.Forms.Padding(2);
-            this.CPhoneTb.Name = "CPhoneTb";
-            this.CPhoneTb.Size = new System.Drawing.Size(161, 30);
-            this.CPhoneTb.TabIndex = 16;
-            this.CPhoneTb.TextChanged += new System.EventHandler(this.CPhoneTb_TextChanged);
+            this.PasswordTb.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordTb.Location = new System.Drawing.Point(462, 300);
+            this.PasswordTb.Margin = new System.Windows.Forms.Padding(2);
+            this.PasswordTb.Name = "PasswordTb";
+            this.PasswordTb.Size = new System.Drawing.Size(161, 30);
+            this.PasswordTb.TabIndex = 16;
+            this.PasswordTb.TextChanged += new System.EventHandler(this.CPhoneTb_TextChanged);
             // 
             // label9
             // 
@@ -120,15 +120,15 @@ namespace FP_kel4
             this.label9.Text = "Username";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // CNameTb
+            // UNameTb
             // 
-            this.CNameTb.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CNameTb.Location = new System.Drawing.Point(462, 221);
-            this.CNameTb.Margin = new System.Windows.Forms.Padding(2);
-            this.CNameTb.Name = "CNameTb";
-            this.CNameTb.Size = new System.Drawing.Size(161, 30);
-            this.CNameTb.TabIndex = 14;
-            this.CNameTb.TextChanged += new System.EventHandler(this.CNameTb_TextChanged);
+            this.UNameTb.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UNameTb.Location = new System.Drawing.Point(462, 221);
+            this.UNameTb.Margin = new System.Windows.Forms.Padding(2);
+            this.UNameTb.Name = "UNameTb";
+            this.UNameTb.Size = new System.Drawing.Size(161, 30);
+            this.UNameTb.TabIndex = 14;
+            this.UNameTb.TextChanged += new System.EventHandler(this.CNameTb_TextChanged);
             // 
             // SaveBtn
             // 
@@ -154,6 +154,7 @@ namespace FP_kel4
             this.SaveBtn.Size = new System.Drawing.Size(154, 42);
             this.SaveBtn.TabIndex = 18;
             this.SaveBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
             // guna2CirclePictureBox1
             // 
@@ -179,6 +180,7 @@ namespace FP_kel4
             this.label1.Size = new System.Drawing.Size(169, 23);
             this.label1.TabIndex = 20;
             this.label1.Text = "Continue as Admin";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Logins
             // 
@@ -190,9 +192,9 @@ namespace FP_kel4
             this.Controls.Add(this.guna2CirclePictureBox1);
             this.Controls.Add(this.SaveBtn);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.CPhoneTb);
+            this.Controls.Add(this.PasswordTb);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.CNameTb);
+            this.Controls.Add(this.UNameTb);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -213,9 +215,9 @@ namespace FP_kel4
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox CPhoneTb;
+        private System.Windows.Forms.TextBox PasswordTb;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox CNameTb;
+        private System.Windows.Forms.TextBox UNameTb;
         private Bunifu.Framework.UI.BunifuThinButton2 SaveBtn;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private System.Windows.Forms.Label label1;

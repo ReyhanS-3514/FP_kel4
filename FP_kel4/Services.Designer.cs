@@ -30,12 +30,11 @@ namespace FP_kel4
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Services));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -51,6 +50,7 @@ namespace FP_kel4
             this.EditBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.SaveBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.ServiceDGV = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -60,7 +60,6 @@ namespace FP_kel4
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.ServiceDGV = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -88,7 +87,6 @@ namespace FP_kel4
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.pictureBox6);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.pictureBox5);
@@ -104,18 +102,6 @@ namespace FP_kel4
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(177, 620);
             this.panel2.TabIndex = 0;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Gold;
-            this.label8.Location = new System.Drawing.Point(40, 383);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 27);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Finance";
             // 
             // pictureBox6
             // 
@@ -139,6 +125,7 @@ namespace FP_kel4
             this.label7.Size = new System.Drawing.Size(81, 27);
             this.label7.TabIndex = 8;
             this.label7.Text = "Logout";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // pictureBox5
             // 
@@ -185,6 +172,7 @@ namespace FP_kel4
             this.label5.Size = new System.Drawing.Size(118, 27);
             this.label5.TabIndex = 4;
             this.label5.Text = "Customers";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // pictureBox3
             // 
@@ -208,6 +196,7 @@ namespace FP_kel4
             this.label4.Size = new System.Drawing.Size(119, 27);
             this.label4.TabIndex = 2;
             this.label4.Text = "Employees";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // pictureBox2
             // 
@@ -340,6 +329,65 @@ namespace FP_kel4
             this.panel5.Size = new System.Drawing.Size(976, 339);
             this.panel5.TabIndex = 13;
             // 
+            // ServiceDGV
+            // 
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.ServiceDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.ServiceDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ServiceDGV.BackgroundColor = System.Drawing.Color.White;
+            this.ServiceDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ServiceDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.ServiceDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ServiceDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.ServiceDGV.ColumnHeadersHeight = 27;
+            this.ServiceDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ServiceDGV.DefaultCellStyle = dataGridViewCellStyle12;
+            this.ServiceDGV.EnableHeadersVisualStyles = false;
+            this.ServiceDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.ServiceDGV.Location = new System.Drawing.Point(12, 44);
+            this.ServiceDGV.Name = "ServiceDGV";
+            this.ServiceDGV.RowHeadersVisible = false;
+            this.ServiceDGV.RowTemplate.Height = 25;
+            this.ServiceDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ServiceDGV.Size = new System.Drawing.Size(949, 292);
+            this.ServiceDGV.TabIndex = 15;
+            this.ServiceDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.ServiceDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.ServiceDGV.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.ServiceDGV.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.ServiceDGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.ServiceDGV.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.ServiceDGV.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.ServiceDGV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.ServiceDGV.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.ServiceDGV.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ServiceDGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.ServiceDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.ServiceDGV.ThemeStyle.HeaderStyle.Height = 27;
+            this.ServiceDGV.ThemeStyle.ReadOnly = false;
+            this.ServiceDGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.ServiceDGV.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.ServiceDGV.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ServiceDGV.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.ServiceDGV.ThemeStyle.RowsStyle.Height = 25;
+            this.ServiceDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.ServiceDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.ServiceDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ServiceDGV_CellContentClick);
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -435,65 +483,6 @@ namespace FP_kel4
             this.panel4.Size = new System.Drawing.Size(1047, 39);
             this.panel4.TabIndex = 1;
             // 
-            // ServiceDGV
-            // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.ServiceDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.ServiceDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.ServiceDGV.BackgroundColor = System.Drawing.Color.White;
-            this.ServiceDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ServiceDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.ServiceDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ServiceDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.ServiceDGV.ColumnHeadersHeight = 27;
-            this.ServiceDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ServiceDGV.DefaultCellStyle = dataGridViewCellStyle9;
-            this.ServiceDGV.EnableHeadersVisualStyles = false;
-            this.ServiceDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.ServiceDGV.Location = new System.Drawing.Point(12, 44);
-            this.ServiceDGV.Name = "ServiceDGV";
-            this.ServiceDGV.RowHeadersVisible = false;
-            this.ServiceDGV.RowTemplate.Height = 25;
-            this.ServiceDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ServiceDGV.Size = new System.Drawing.Size(949, 292);
-            this.ServiceDGV.TabIndex = 15;
-            this.ServiceDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.ServiceDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.ServiceDGV.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.ServiceDGV.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.ServiceDGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.ServiceDGV.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.ServiceDGV.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.ServiceDGV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ServiceDGV.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.ServiceDGV.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ServiceDGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.ServiceDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.ServiceDGV.ThemeStyle.HeaderStyle.Height = 27;
-            this.ServiceDGV.ThemeStyle.ReadOnly = false;
-            this.ServiceDGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.ServiceDGV.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.ServiceDGV.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ServiceDGV.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.ServiceDGV.ThemeStyle.RowsStyle.Height = 25;
-            this.ServiceDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.ServiceDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.ServiceDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ServiceDGV_CellContentClick);
-            // 
             // Services
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -523,7 +512,6 @@ namespace FP_kel4
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox5;

@@ -35,7 +35,7 @@ namespace FP_kel4
             this.label1 = new System.Windows.Forms.Label();
             this.SaveBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label10 = new System.Windows.Forms.Label();
-            this.CPhoneTb = new System.Windows.Forms.TextBox();
+            this.AdminPassTb = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -111,15 +111,15 @@ namespace FP_kel4
             this.label10.Text = "Password";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
-            // CPhoneTb
+            // AdminPassTb
             // 
-            this.CPhoneTb.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CPhoneTb.Location = new System.Drawing.Point(436, 177);
-            this.CPhoneTb.Margin = new System.Windows.Forms.Padding(2);
-            this.CPhoneTb.Name = "CPhoneTb";
-            this.CPhoneTb.Size = new System.Drawing.Size(161, 30);
-            this.CPhoneTb.TabIndex = 21;
-            this.CPhoneTb.TextChanged += new System.EventHandler(this.CPhoneTb_TextChanged);
+            this.AdminPassTb.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminPassTb.Location = new System.Drawing.Point(436, 177);
+            this.AdminPassTb.Margin = new System.Windows.Forms.Padding(2);
+            this.AdminPassTb.Name = "AdminPassTb";
+            this.AdminPassTb.Size = new System.Drawing.Size(161, 30);
+            this.AdminPassTb.TabIndex = 21;
+            this.AdminPassTb.TextChanged += new System.EventHandler(this.CPhoneTb_TextChanged);
             // 
             // label2
             // 
@@ -154,7 +154,7 @@ namespace FP_kel4
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SaveBtn);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.CPhoneTb);
+            this.Controls.Add(this.AdminPassTb);
             this.Controls.Add(this.panel1);
             this.Name = "AdminLogin";
             this.Text = "AdminLogin";
@@ -171,7 +171,7 @@ namespace FP_kel4
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuThinButton2 SaveBtn;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox CPhoneTb;
+        private System.Windows.Forms.TextBox AdminPassTb;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
     }

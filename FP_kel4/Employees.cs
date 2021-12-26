@@ -35,6 +35,7 @@ namespace FP_kel4
             EPhoneTb.Text = "";
             EGenCb.SelectedIndex = -1;
             EAddTb.Text = "";
+            PassTb.Text = "";
         }
 
         private void displayEmp()
@@ -51,7 +52,7 @@ namespace FP_kel4
         }
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-            if (ENameTb.Text == "" || EPhoneTb.Text == "" || EGenCb.SelectedIndex == -1 || EAddTb.Text == "")
+            if (ENameTb.Text == "" || EPhoneTb.Text == "" || EGenCb.SelectedIndex == -1 || EAddTb.Text == "" || PassTb.Text == "")
             {
                 MessageBox.Show("Missing Information");
             }
@@ -60,11 +61,12 @@ namespace FP_kel4
                 try
                 {
                     Con.Open();
-                    SqlCommand cmd = new SqlCommand("insert into EmployeeTbl(EName,EPhone,EGen,EAdd) values (@En,@Ep,@Eg,@Ea)", Con);
+                    SqlCommand cmd = new SqlCommand("insert into EmployeeTbl(EName,EPhone,EGen,EAdd,EPass) values (@En,@Ep,@Eg,@Ea,@Passw)", Con);
                     cmd.Parameters.AddWithValue("@En", ENameTb.Text);
                     cmd.Parameters.AddWithValue("@Ep", EPhoneTb.Text);
                     cmd.Parameters.AddWithValue("@Eg", EGenCb.SelectedItem.ToString());
                     cmd.Parameters.AddWithValue("@Ea", EAddTb.Text);
+                    cmd.Parameters.AddWithValue("@Passw", PassTb.Text);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Employee Disimpan");
                     
@@ -85,7 +87,8 @@ namespace FP_kel4
             EPhoneTb.Text = EmployeeDGV.SelectedRows[0].Cells[2].Value.ToString();
             EGenCb.SelectedItem = EmployeeDGV.SelectedRows[0].Cells[3].Value.ToString();
             EAddTb.Text = EmployeeDGV.SelectedRows[0].Cells[4].Value.ToString();
-            if(ENameTb.Text=="")
+            PassTb.Text = EmployeeDGV.SelectedRows[0].Cells[5].Value.ToString();
+            if (ENameTb.Text=="")
             {
                 Key = 0;
             }
@@ -116,18 +119,19 @@ namespace FP_kel4
 
         private void EditBtn_Click(object sender, EventArgs e)
         {
-            if (ENameTb.Text == "" || EPhoneTb.Text == "" || EGenCb.SelectedIndex == -1 || EAddTb.Text == "")
+            if (ENameTb.Text == "" || EPhoneTb.Text == "" || EGenCb.SelectedIndex == -1 || EAddTb.Text == "" || PassTb.Text == "")
             {
                 MessageBox.Show("Missing Information");
             }
             else
             {
                 Con.Open();
-                SqlCommand cmd = new SqlCommand("Update EmployeeTbl set EName=@En,EPhone=@Ep,EGen= @Eg,EAdd= @Ea where EId=@EmId", Con);
+                SqlCommand cmd = new SqlCommand("Update EmployeeTbl set EName=@En,EPhone=@Ep,EGen= @Eg,EAdd= @Ea, EPass=@Passw where EId=@EmId", Con);
                 cmd.Parameters.AddWithValue("@En", ENameTb.Text);
                 cmd.Parameters.AddWithValue("@Ep", EPhoneTb.Text);
                 cmd.Parameters.AddWithValue("@Eg", EGenCb.SelectedItem.ToString());
                 cmd.Parameters.AddWithValue("@Ea", EAddTb.Text);
+                cmd.Parameters.AddWithValue("@Passw", PassTb.Text);
                 cmd.Parameters.AddWithValue("@EmId", Key);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Employee Diupdate");
@@ -136,6 +140,32 @@ namespace FP_kel4
                 displayEmp();
                 Reset();
             }
+        }
+
+        private void PassTb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            Logins Obj = new Logins();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            Customers Obj = new Customers();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            Services Obj = new Services();
+            Obj.Show();
+            this.Hide();
         }
     }
 }

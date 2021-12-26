@@ -19,12 +19,26 @@ namespace FP_kel4
 
         private void label1_Click(object sender, EventArgs e)
         {
-
+            Logins Obj = new Logins();
+            Obj.Show();
+            this.Hide();
         }
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-
+            if (AdminPassTb.Text == "")
+            {
+                MessageBox.Show("Masukkan Password");
+            }else if (AdminPassTb.Text == "admin")
+            {
+                Employees Obj = new Employees();
+                Obj.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Password Salah");
+            }
         }
 
         private void CPhoneTb_TextChanged(object sender, EventArgs e)

@@ -123,5 +123,26 @@ namespace FP_kel4
                 Reset();
             }
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            Logins Obj = new Logins();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Employees Obj = new Employees();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            Customers Obj = new Customers();
+            Obj.Show();
+            this.Hide();
+        }
     }
 }

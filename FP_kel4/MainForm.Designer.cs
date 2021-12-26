@@ -32,8 +32,7 @@ namespace FP_kel4
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -49,10 +48,8 @@ namespace FP_kel4
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -79,8 +76,6 @@ namespace FP_kel4
             // 
             this.panel2.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.pictureBox7);
-            this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.pictureBox6);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.pictureBox5);
@@ -97,28 +92,18 @@ namespace FP_kel4
             this.panel2.Size = new System.Drawing.Size(177, 620);
             this.panel2.TabIndex = 0;
             // 
-            // pictureBox7
+            // label9
             // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(10, 320);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(26, 26);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 11;
-            this.pictureBox7.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Gold;
-            this.label8.Location = new System.Drawing.Point(40, 321);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 27);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Finance";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Gold;
+            this.label9.Location = new System.Drawing.Point(21, 28);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(114, 27);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Cuci Mobil";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // pictureBox6
             // 
@@ -142,6 +127,7 @@ namespace FP_kel4
             this.label7.Size = new System.Drawing.Size(81, 27);
             this.label7.TabIndex = 8;
             this.label7.Text = "Logout";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // pictureBox5
             // 
@@ -291,19 +277,6 @@ namespace FP_kel4
             this.panel4.Size = new System.Drawing.Size(1047, 67);
             this.panel4.TabIndex = 1;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Gold;
-            this.label9.Location = new System.Drawing.Point(21, 28);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(114, 27);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Cuci Mobil";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -315,7 +288,6 @@ namespace FP_kel4
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -347,8 +319,6 @@ namespace FP_kel4
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
     }
 }

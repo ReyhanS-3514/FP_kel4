@@ -41,5 +41,12 @@ namespace FP_kel4
         {
 
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            Logins Obj = new Logins();
+            Obj.Show();
+            this.Hide();
+        }
     }
 }
