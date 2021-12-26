@@ -161,6 +161,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminLogin.Designer.cs">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,12 @@
     </Compile>
     <Compile Include="Employees.Designer.cs">
       <DependentUpon>Employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logins.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logins.Designer.cs">
+      <DependentUpon>Logins.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -187,17 +199,29 @@
     <Compile Include="Services.Designer.cs">
       <DependentUpon>Services.cs</DependentUpon>
     </Compile>
+    <Compile Include="Splashs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splashs.Designer.cs">
+      <DependentUpon>Splashs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Washs.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Washs.Designer.cs">
       <DependentUpon>Washs.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminLogin.resx">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customers.resx">
       <DependentUpon>Customers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employees.resx">
       <DependentUpon>Employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logins.resx">
+      <DependentUpon>Logins.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -213,6 +237,9 @@
     </Compile>
     <EmbeddedResource Include="Services.resx">
       <DependentUpon>Services.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splashs.resx">
+      <DependentUpon>Splashs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Washs.resx">
       <DependentUpon>Washs.cs</DependentUpon>
