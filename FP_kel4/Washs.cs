@@ -59,5 +59,45 @@ namespace FP_kel4
             ServiceCb.DataSource = dt;
             Con.Close();
         }
+
+        private void GetCustData()
+        {
+            Con.Open();
+            string query = "select * from CustomerTbl where CName='"+CustNameCb.SelectedValue.ToString()+"'";
+            SqlCommand cmd = new SqlCommand(query, Con);
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach(DataRow dr in dt.Rows)
+            {
+                CustPhoneTb.Text = dr["CPhone"].ToString();
+            }
+            Con.Close();
+        }
+
+        private void GetServiceData()
+        {
+            Con.Open();
+            string query = "select * from ServiceTbl where SName='" + ServiceCb.SelectedValue.ToString() + "'";
+            SqlCommand cmd = new SqlCommand(query, Con);
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                PriceTb.Text = dr["SPrice"].ToString();
+            }
+            Con.Close();
+        }
+
+        private void CustNameCb_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            GetCustData();
+        }
+
+        private void ServiceCb_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            GetServiceData();
+        }
     }
 }

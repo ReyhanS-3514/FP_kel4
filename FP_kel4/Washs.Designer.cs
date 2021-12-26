@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Washs));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label13 = new System.Windows.Forms.Label();
@@ -44,9 +44,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.CustNameCb = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.EPhoneTb = new System.Windows.Forms.TextBox();
+            this.PriceTb = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.ENameTb = new System.Windows.Forms.TextBox();
+            this.CustPhoneTb = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -101,31 +101,31 @@
             // 
             // EmployeeDGV
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.EmployeeDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.EmployeeDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.EmployeeDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.EmployeeDGV.BackgroundColor = System.Drawing.Color.White;
             this.EmployeeDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.EmployeeDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.EmployeeDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EmployeeDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EmployeeDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.EmployeeDGV.ColumnHeadersHeight = 27;
             this.EmployeeDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.EmployeeDGV.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.EmployeeDGV.DefaultCellStyle = dataGridViewCellStyle15;
             this.EmployeeDGV.EnableHeadersVisualStyles = false;
             this.EmployeeDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.EmployeeDGV.Location = new System.Drawing.Point(22, 39);
@@ -171,9 +171,9 @@
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.CustNameCb);
             this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.EPhoneTb);
+            this.panel3.Controls.Add(this.PriceTb);
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.ENameTb);
+            this.panel3.Controls.Add(this.CustPhoneTb);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.panel4);
@@ -277,6 +277,7 @@
             this.CustNameCb.Size = new System.Drawing.Size(163, 31);
             this.CustNameCb.TabIndex = 9;
             this.CustNameCb.Text = "Customer Name";
+            this.CustNameCb.SelectionChangeCommitted += new System.EventHandler(this.CustNameCb_SelectionChangeCommitted);
             // 
             // label10
             // 
@@ -290,14 +291,15 @@
             this.label10.TabIndex = 8;
             this.label10.Text = "Harga";
             // 
-            // EPhoneTb
+            // PriceTb
             // 
-            this.EPhoneTb.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EPhoneTb.Location = new System.Drawing.Point(287, 304);
-            this.EPhoneTb.Margin = new System.Windows.Forms.Padding(2);
-            this.EPhoneTb.Name = "EPhoneTb";
-            this.EPhoneTb.Size = new System.Drawing.Size(184, 30);
-            this.EPhoneTb.TabIndex = 7;
+            this.PriceTb.Enabled = false;
+            this.PriceTb.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PriceTb.Location = new System.Drawing.Point(287, 304);
+            this.PriceTb.Margin = new System.Windows.Forms.Padding(2);
+            this.PriceTb.Name = "PriceTb";
+            this.PriceTb.Size = new System.Drawing.Size(184, 30);
+            this.PriceTb.TabIndex = 7;
             // 
             // label9
             // 
@@ -311,14 +313,15 @@
             this.label9.TabIndex = 6;
             this.label9.Text = "Telp";
             // 
-            // ENameTb
+            // CustPhoneTb
             // 
-            this.ENameTb.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ENameTb.Location = new System.Drawing.Point(96, 304);
-            this.ENameTb.Margin = new System.Windows.Forms.Padding(2);
-            this.ENameTb.Name = "ENameTb";
-            this.ENameTb.Size = new System.Drawing.Size(174, 30);
-            this.ENameTb.TabIndex = 5;
+            this.CustPhoneTb.Enabled = false;
+            this.CustPhoneTb.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustPhoneTb.Location = new System.Drawing.Point(96, 304);
+            this.CustPhoneTb.Margin = new System.Windows.Forms.Padding(2);
+            this.CustPhoneTb.Name = "CustPhoneTb";
+            this.CustPhoneTb.Size = new System.Drawing.Size(174, 30);
+            this.CustPhoneTb.TabIndex = 5;
             // 
             // label2
             // 
@@ -531,6 +534,7 @@
             this.ServiceCb.Size = new System.Drawing.Size(173, 31);
             this.ServiceCb.TabIndex = 17;
             this.ServiceCb.Text = "Service";
+            this.ServiceCb.SelectionChangeCommitted += new System.EventHandler(this.ServiceCb_SelectionChangeCommitted);
             // 
             // label14
             // 
@@ -606,9 +610,9 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox CustNameCb;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox EPhoneTb;
+        private System.Windows.Forms.TextBox PriceTb;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox ENameTb;
+        private System.Windows.Forms.TextBox CustPhoneTb;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
