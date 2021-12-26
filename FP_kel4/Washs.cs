@@ -101,6 +101,46 @@ namespace FP_kel4
             GetServiceData();
         }
         int n = 0, Grdtotal = 0;
+
+        private void Reset()
+        {
+            CustNameCb.SelectedIndex = -1;
+            CustPhoneTb.Text = "";
+            ServiceCb.SelectedIndex = -1;
+            PriceTb.Text = "";
+            
+        }
+        private void BillBtn_Click(object sender, EventArgs e)
+        {
+            if (CustPhoneTb.Text == "" || Grdtotal == 0)
+            {
+                MessageBox.Show("Missing Information");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    SqlCommand cmd = new SqlCommand("insert into InvoiceTbl(CustName,CustPhone,EName,Amt,IDate) values (@Cn,@Cp,@En,@Am,@Id)", Con);
+                    cmd.Parameters.AddWithValue("@Cn", CustNameCb.SelectedValue.ToString());
+                    cmd.Parameters.AddWithValue("@Cp", CustPhoneTb.Text);
+                    cmd.Parameters.AddWithValue("@En", ENamelbl.Text);
+                    cmd.Parameters.AddWithValue("@Am", Grdtotal);
+                    cmd.Parameters.AddWithValue("@Id", TodayDate.Value.Date);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Invoice Disimpan");
+
+                    Con.Close();
+                    
+                    Reset();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
+
         private void SaveBtn_Click(object sender, EventArgs e)
         {
             if (PriceTb.Text=="")

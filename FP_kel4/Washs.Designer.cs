@@ -41,10 +41,10 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.TodayDate = new System.Windows.Forms.DateTimePicker();
             this.ENamelbl = new System.Windows.Forms.Label();
             this.ServiceCb = new System.Windows.Forms.ComboBox();
-            this.DeleteBtn = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.BillBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.SaveBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
@@ -183,10 +183,10 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.label15);
-            this.panel3.Controls.Add(this.dateTimePicker1);
+            this.panel3.Controls.Add(this.TodayDate);
             this.panel3.Controls.Add(this.ENamelbl);
             this.panel3.Controls.Add(this.ServiceCb);
-            this.panel3.Controls.Add(this.DeleteBtn);
+            this.panel3.Controls.Add(this.BillBtn);
             this.panel3.Controls.Add(this.SaveBtn);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.label12);
@@ -217,14 +217,14 @@
             this.label15.TabIndex = 20;
             this.label15.Text = "Date";
             // 
-            // dateTimePicker1
+            // TodayDate
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(220, 141);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(127, 27);
-            this.dateTimePicker1.TabIndex = 19;
+            this.TodayDate.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TodayDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.TodayDate.Location = new System.Drawing.Point(220, 141);
+            this.TodayDate.Name = "TodayDate";
+            this.TodayDate.Size = new System.Drawing.Size(127, 27);
+            this.TodayDate.TabIndex = 19;
             // 
             // ENamelbl
             // 
@@ -251,30 +251,31 @@
             this.ServiceCb.Text = "Service";
             this.ServiceCb.SelectionChangeCommitted += new System.EventHandler(this.ServiceCb_SelectionChangeCommitted);
             // 
-            // DeleteBtn
+            // BillBtn
             // 
-            this.DeleteBtn.ActiveBorderThickness = 1;
-            this.DeleteBtn.ActiveCornerRadius = 20;
-            this.DeleteBtn.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.DeleteBtn.ActiveForecolor = System.Drawing.Color.White;
-            this.DeleteBtn.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.DeleteBtn.BackColor = System.Drawing.Color.White;
-            this.DeleteBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DeleteBtn.BackgroundImage")));
-            this.DeleteBtn.ButtonText = "Add Bill";
-            this.DeleteBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DeleteBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteBtn.ForeColor = System.Drawing.Color.SeaGreen;
-            this.DeleteBtn.IdleBorderThickness = 1;
-            this.DeleteBtn.IdleCornerRadius = 20;
-            this.DeleteBtn.IdleFillColor = System.Drawing.Color.White;
-            this.DeleteBtn.IdleForecolor = System.Drawing.Color.Crimson;
-            this.DeleteBtn.IdleLineColor = System.Drawing.Color.Crimson;
-            this.DeleteBtn.Location = new System.Drawing.Point(696, 537);
-            this.DeleteBtn.Margin = new System.Windows.Forms.Padding(5);
-            this.DeleteBtn.Name = "DeleteBtn";
-            this.DeleteBtn.Size = new System.Drawing.Size(154, 33);
-            this.DeleteBtn.TabIndex = 16;
-            this.DeleteBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.BillBtn.ActiveBorderThickness = 1;
+            this.BillBtn.ActiveCornerRadius = 20;
+            this.BillBtn.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.BillBtn.ActiveForecolor = System.Drawing.Color.White;
+            this.BillBtn.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.BillBtn.BackColor = System.Drawing.Color.White;
+            this.BillBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BillBtn.BackgroundImage")));
+            this.BillBtn.ButtonText = "Add Bill";
+            this.BillBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BillBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BillBtn.ForeColor = System.Drawing.Color.SeaGreen;
+            this.BillBtn.IdleBorderThickness = 1;
+            this.BillBtn.IdleCornerRadius = 20;
+            this.BillBtn.IdleFillColor = System.Drawing.Color.White;
+            this.BillBtn.IdleForecolor = System.Drawing.Color.Crimson;
+            this.BillBtn.IdleLineColor = System.Drawing.Color.Crimson;
+            this.BillBtn.Location = new System.Drawing.Point(696, 537);
+            this.BillBtn.Margin = new System.Windows.Forms.Padding(5);
+            this.BillBtn.Name = "BillBtn";
+            this.BillBtn.Size = new System.Drawing.Size(154, 33);
+            this.BillBtn.TabIndex = 16;
+            this.BillBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.BillBtn.Click += new System.EventHandler(this.BillBtn_Click);
             // 
             // SaveBtn
             // 
@@ -626,7 +627,7 @@
         private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2DataGridView ServiceDGV;
         private System.Windows.Forms.Panel panel3;
-        private Bunifu.Framework.UI.BunifuThinButton2 DeleteBtn;
+        private Bunifu.Framework.UI.BunifuThinButton2 BillBtn;
         private Bunifu.Framework.UI.BunifuThinButton2 SaveBtn;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label12;
@@ -654,7 +655,7 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker TodayDate;
         private System.Windows.Forms.Label ENamelbl;
         private System.Windows.Forms.ComboBox ServiceCb;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
