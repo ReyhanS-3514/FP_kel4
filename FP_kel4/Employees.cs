@@ -27,7 +27,7 @@ namespace FP_kel4
         {
 
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Reyhan\Documents\CarWashDb.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\fortz\Documents\CarWashDb.mdf;Integrated Security=True;Connect Timeout=30");
 
         private void Reset()
         {

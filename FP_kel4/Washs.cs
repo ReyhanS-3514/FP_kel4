@@ -32,20 +32,20 @@ namespace FP_kel4
 
         }
 
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Reyhan\Documents\CarWashDb.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\fortz\Documents\CarWashDb.mdf;Integrated Security=True;Connect Timeout=30");
 
         private void FillCust()
         {
-            Con.Open();
-            SqlCommand cmd = new SqlCommand("select Cname from CustomerTbl", Con);
-            SqlDataReader rdr;
-            rdr = cmd.ExecuteReader();
-            DataTable dt = new DataTable();
-            dt.Columns.Add("CName", typeof(string));
-            dt.Load(rdr);
-            CustNameCb.ValueMember = "CName";
-            CustNameCb.DataSource = dt;
-            Con.Close();
+            //Con.Open();
+            //SqlCommand cmd = new SqlCommand("select Cname from CustomerTbl", Con);
+            //SqlDataReader rdr;
+            //rdr = cmd.ExecuteReader();
+            //DataTable dt = new DataTable();
+            //dt.Columns.Add("CName", typeof(string));
+            //dt.Load(rdr);
+            //CustNameCb.ValueMember = "CName";
+            //CustNameCb.DataSource = dt;
+            //Con.Close();
         }
 
         private void FillServices()
@@ -62,19 +62,33 @@ namespace FP_kel4
             Con.Close();
         }
 
-        private void GetCustData()
+        private void ResetTable()
         {
             Con.Open();
-            string query = "select * from CustomerTbl where CName='"+CustNameCb.SelectedValue.ToString()+"'";
+            string query = "Truncate";
             SqlCommand cmd = new SqlCommand(query, Con);
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
-            foreach(DataRow dr in dt.Rows)
+            foreach (DataRow dr in dt.Rows)
             {
-                CustPhoneTb.Text = dr["CPhone"].ToString();
+                PriceTb.Text = dr["SPrice"].ToString();
             }
             Con.Close();
+        }
+        private void GetCustData()
+        {
+            //Con.Open();
+            //string query = "select * from CustomerTbl where CName='"+CustNameCb.SelectedValue.ToString()+"'";
+            //SqlCommand cmd = new SqlCommand(query, Con);
+            //DataTable dt = new DataTable();
+            //SqlDataAdapter da = new SqlDataAdapter(cmd);
+            //da.Fill(dt);
+            //foreach(DataRow dr in dt.Rows)
+            //{
+            //    CustPhoneTb.Text = dr["CPhone"].ToString();
+            //}
+            //Con.Close();
         }
 
         private void GetServiceData()
@@ -105,15 +119,17 @@ namespace FP_kel4
 
         private void Reset()
         {
-            CustNameCb.SelectedIndex = -1;
+            CustNameTb.Text = "";
             CustPhoneTb.Text = "";
+            CustPlatTb.Text = "";
+            CustCarTb.Text = "";
             ServiceCb.SelectedIndex = -1;
             PriceTb.Text = "";
             
         }
         private void BillBtn_Click(object sender, EventArgs e)
         {
-            if (CustPhoneTb.Text == "" || Grdtotal == 0)
+            if (CustNameTb.Text == "" || CustPhoneTb.Text == "" || CustPlatTb.Text == "" || CustCarTb.Text == "" || Grdtotal == 0)
             {
                 MessageBox.Show("Missing Information");
             }
@@ -122,18 +138,24 @@ namespace FP_kel4
                 try
                 {
                     Con.Open();
-                    SqlCommand cmd = new SqlCommand("insert into InvoiceTbl(CustName,CustPhone,EName,Amt,IDate) values (@Cn,@Cp,@En,@Am,@Id)", Con);
-                    cmd.Parameters.AddWithValue("@Cn", CustNameCb.SelectedValue.ToString());
+                    SqlCommand cmd = new SqlCommand("insert into InvoiceTbl(CustName,CustPhone,EName,Amt,IDate,CustPlat,CustCar) values (@Cn,@Cp,@En,@Am,@Id,@Cpl,@Cc)", Con);
+                    
+                    cmd.Parameters.AddWithValue("@Cn", CustNameTb.Text);
                     cmd.Parameters.AddWithValue("@Cp", CustPhoneTb.Text);
                     cmd.Parameters.AddWithValue("@En", ENamelbl.Text);
                     cmd.Parameters.AddWithValue("@Am", Grdtotal);
                     cmd.Parameters.AddWithValue("@Id", TodayDate.Value.Date);
+                    cmd.Parameters.AddWithValue("@Cpl", CustPlatTb.Text);
+                    cmd.Parameters.AddWithValue("@Cc", CustCarTb.Text);
                     cmd.ExecuteNonQuery();
+
+                   
                     MessageBox.Show("Invoice Disimpan");
 
                     Con.Close();
                     
                     Reset();
+                    ServiceDGV.Rows.Clear();
                 }
                 catch (Exception Ex)
                 {
