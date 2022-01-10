@@ -16,7 +16,7 @@ namespace FP_kel4
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Logins());
+            Application.Run(new Splashs());
         }
     }
 }

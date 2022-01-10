@@ -95,10 +95,10 @@ namespace FP_kel4
         int Key = 0;
         private void CustomerDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            CNameTb.Text = CustomerDGV.SelectedRows[0].Cells[1].Value.ToString();
-            CPhoneTb.Text = CustomerDGV.SelectedRows[0].Cells[2].Value.ToString();
-            CPlatTb.Text = CustomerDGV.SelectedRows[0].Cells[3].Value.ToString();
-            CCarTb.Text = CustomerDGV.SelectedRows[0].Cells[4].Value.ToString();
+            CNameTb.Text = CustomerDGV.SelectedRows[0].Cells[0].Value.ToString();
+            CPhoneTb.Text = CustomerDGV.SelectedRows[0].Cells[1].Value.ToString();
+            CPlatTb.Text = CustomerDGV.SelectedRows[0].Cells[2].Value.ToString();
+            CCarTb.Text = CustomerDGV.SelectedRows[0].Cells[3].Value.ToString();
             if (CNameTb.Text == "")
             {
                 Key = 0;

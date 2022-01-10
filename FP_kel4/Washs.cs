@@ -183,7 +183,7 @@ namespace FP_kel4
         {
             
             e.Graphics.DrawString("Cuci Movil Kelompok 4", new Font("Century Gothic", 12, FontStyle.Bold), Brushes.Red, new Point(50));
-            e.Graphics.DrawString("ID SERVIS HARGA", new Font("Century Gothic", 10, FontStyle.Bold), Brushes.Red, new Point(26 + 26,40));
+            e.Graphics.DrawString("ID SERVIS           HARGA", new Font("Century Gothic", 10, FontStyle.Bold), Brushes.Red, new Point(26 + 26,40));
             foreach (DataGridViewRow row in ServiceDGV.Rows)
             {
                 sId = Convert.ToInt32(row.Cells["Column1"].Value);
@@ -192,7 +192,7 @@ namespace FP_kel4
 
                 e.Graphics.DrawString("" + sId, new Font("Century Gothic", 8, FontStyle.Bold), Brushes.Blue, new Point(26 + 26, pos));
                 e.Graphics.DrawString("" + sName, new Font("Century Gothic", 8, FontStyle.Bold), Brushes.Blue, new Point(45 + 26, pos));
-                e.Graphics.DrawString("" + sPrice, new Font("Century Gothic", 8, FontStyle.Bold), Brushes.Blue, new Point(120 + 26, pos));
+                e.Graphics.DrawString("" + sPrice, new Font("Century Gothic", 8, FontStyle.Bold), Brushes.Blue, new Point(120 + 36, pos));
                 pos = pos + 20;
             }
             e.Graphics.DrawString("Total : Rp." + Grdtotal, new Font("Century Gothic", 12, FontStyle.Bold), Brushes.Crimson, new Point(50, pos + 50));
