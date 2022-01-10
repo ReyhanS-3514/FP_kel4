@@ -133,6 +133,10 @@ namespace FP_kel4
 
         private void label4_Click(object sender, EventArgs e)
         {
+            //Con.Open();
+            //SqlCommand cmd = new SqlCommand("TRUNCATE TABLE ServiceTbl", Con);
+            //cmd.ExecuteNonQuery();
+            //Con.Close();
             Employees Obj = new Employees();
             Obj.Show();
             this.Hide();
