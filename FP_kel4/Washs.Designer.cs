@@ -40,6 +40,8 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.CustPhoneTb = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.CustCarTb = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -72,8 +74,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.CustPhoneTb = new System.Windows.Forms.TextBox();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)(this.ServiceDGV)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -211,6 +213,27 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1047, 606);
             this.panel3.TabIndex = 1;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Crimson;
+            this.label9.Location = new System.Drawing.Point(292, 200);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(53, 26);
+            this.label9.TabIndex = 28;
+            this.label9.Text = "Telp";
+            // 
+            // CustPhoneTb
+            // 
+            this.CustPhoneTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustPhoneTb.Location = new System.Drawing.Point(297, 229);
+            this.CustPhoneTb.Margin = new System.Windows.Forms.Padding(2);
+            this.CustPhoneTb.Name = "CustPhoneTb";
+            this.CustPhoneTb.Size = new System.Drawing.Size(161, 29);
+            this.CustPhoneTb.TabIndex = 27;
             // 
             // label14
             // 
@@ -605,26 +628,19 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "Services";
             // 
-            // label9
+            // printDocument1
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Crimson;
-            this.label9.Location = new System.Drawing.Point(292, 200);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(53, 26);
-            this.label9.TabIndex = 28;
-            this.label9.Text = "Telp";
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
-            // CustPhoneTb
+            // printPreviewDialog1
             // 
-            this.CustPhoneTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CustPhoneTb.Location = new System.Drawing.Point(297, 229);
-            this.CustPhoneTb.Margin = new System.Windows.Forms.Padding(2);
-            this.CustPhoneTb.Name = "CustPhoneTb";
-            this.CustPhoneTb.Size = new System.Drawing.Size(161, 29);
-            this.CustPhoneTb.TabIndex = 27;
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // Washs
             // 
@@ -696,5 +712,7 @@
         private System.Windows.Forms.TextBox CustCarTb;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox CustPhoneTb;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

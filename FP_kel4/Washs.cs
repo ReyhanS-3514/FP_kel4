@@ -153,7 +153,9 @@ namespace FP_kel4
                     MessageBox.Show("Invoice Disimpan");
 
                     Con.Close();
-                    
+                    printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 600);
+                    printPreviewDialog1.Document = printDocument1;
+                    printPreviewDialog1.ShowDialog();
                     Reset();
                     ServiceDGV.Rows.Clear();
                 }
@@ -174,6 +176,28 @@ namespace FP_kel4
             Logins Obj = new Logins();
             Obj.Show();
             this.Hide();
+        }
+        int sId, sPrice, pos = 60;
+        string sName;
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            
+            e.Graphics.DrawString("Cuci Movil Kelompok 4", new Font("Century Gothic", 12, FontStyle.Bold), Brushes.Red, new Point(50));
+            e.Graphics.DrawString("ID SERVIS HARGA", new Font("Century Gothic", 10, FontStyle.Bold), Brushes.Red, new Point(26 + 26,40));
+            foreach (DataGridViewRow row in ServiceDGV.Rows)
+            {
+                sId = Convert.ToInt32(row.Cells["Column1"].Value);
+                sName = "" + row.Cells["Column2"].Value;
+                sPrice = Convert.ToInt32(row.Cells["Column3"].Value);
+
+                e.Graphics.DrawString("" + sId, new Font("Century Gothic", 8, FontStyle.Bold), Brushes.Blue, new Point(26 + 26, pos));
+                e.Graphics.DrawString("" + sName, new Font("Century Gothic", 8, FontStyle.Bold), Brushes.Blue, new Point(45 + 26, pos));
+                e.Graphics.DrawString("" + sPrice, new Font("Century Gothic", 8, FontStyle.Bold), Brushes.Blue, new Point(120 + 26, pos));
+                pos = pos + 20;
+            }
+            e.Graphics.DrawString("Total : Rp." + Grdtotal, new Font("Century Gothic", 12, FontStyle.Bold), Brushes.Crimson, new Point(50, pos + 50));
+            e.Graphics.DrawString("********** Cuci Mobil **********" , new Font("Century Gothic", 12, FontStyle.Bold), Brushes.Crimson, new Point(10, pos + 85));
+
         }
 
         private void SaveBtn_Click(object sender, EventArgs e)
