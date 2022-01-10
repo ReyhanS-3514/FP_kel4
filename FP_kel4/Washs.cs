@@ -177,13 +177,24 @@ namespace FP_kel4
             Obj.Show();
             this.Hide();
         }
-        int sId, sPrice, pos = 60;
-        string sName;
+        int sId, sPrice, pos = 120 + 65;
+        string sName, cName, cTelp, cCar, cPlat, eName;
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            
+            cName = CustNameTb.Text;
+            eName = ENamelbl.Text;
+            cPlat = CustPlatTb.Text;
+            cCar = CustCarTb.Text;
+            cTelp = CustPhoneTb.Text;
+
             e.Graphics.DrawString("Cuci Mobil Kelompok 4", new Font("Century Gothic", 12, FontStyle.Bold), Brushes.Red, new Point(50));
-            e.Graphics.DrawString("ID SERVIS                 HARGA", new Font("Century Gothic", 10, FontStyle.Bold), Brushes.Red, new Point(26 + 26,40));
+            e.Graphics.DrawString("Employee : " + eName, new Font("Century Gothic", 6, FontStyle.Bold), Brushes.Blue, new Point(26, 20+30));
+            e.Graphics.DrawString("Customer : " + cName, new Font("Century Gothic", 6, FontStyle.Bold), Brushes.Blue, new Point(26 , 50 + 30));
+            e.Graphics.DrawString("Telp     : " + cTelp, new Font("Century Gothic", 6, FontStyle.Bold), Brushes.Blue, new Point(26 , 70 + 30));
+            e.Graphics.DrawString("Mobil    : " + cCar, new Font("Century Gothic", 6, FontStyle.Bold), Brushes.Blue, new Point(130 + 42, 50 + 30));
+            e.Graphics.DrawString("NoPol    : " + cPlat, new Font("Century Gothic", 6, FontStyle.Bold), Brushes.Blue, new Point(130 + 42, 70 + 30));
+            e.Graphics.DrawString("************* Invoice *************", new Font("Century Gothic", 12, FontStyle.Bold), Brushes.Crimson, new Point(10, 107 +20));
+            e.Graphics.DrawString("ID SERVIS                 HARGA", new Font("Century Gothic", 10, FontStyle.Bold), Brushes.Red, new Point(26 + 26,107 + 55));
             foreach (DataGridViewRow row in ServiceDGV.Rows)
             {
                 sId = Convert.ToInt32(row.Cells["Column1"].Value);
@@ -196,7 +207,7 @@ namespace FP_kel4
                 pos = pos + 20;
             }
             e.Graphics.DrawString("Total : Rp." + Grdtotal, new Font("Century Gothic", 12, FontStyle.Bold), Brushes.Crimson, new Point(50, pos + 50));
-            e.Graphics.DrawString("********** Cuci Mobil **********" , new Font("Century Gothic", 12, FontStyle.Bold), Brushes.Crimson, new Point(10, pos + 85));
+            e.Graphics.DrawString("*********** Cuci Mobil ***********" , new Font("Century Gothic", 12, FontStyle.Bold), Brushes.Crimson, new Point(10, pos + 85));
 
         }
 
