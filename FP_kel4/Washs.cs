@@ -20,6 +20,8 @@ namespace FP_kel4
             FillCust();
             FillServices();
             ENamelbl.Text = Logins.Username;
+            Reset();
+            ServiceCb.SelectedText = "Service";
         }
 
         private void label13_Click(object sender, EventArgs e)
@@ -119,13 +121,17 @@ namespace FP_kel4
 
         private void Reset()
         {
+            
             CustNameTb.Text = "";
             CustPhoneTb.Text = "";
             CustPlatTb.Text = "";
             CustCarTb.Text = "";
             ServiceCb.SelectedIndex = -1;
+            ServiceCb.SelectedText = "Service";
             PriceTb.Text = "";
-            
+            n = 0;
+            pos = 120 + 65;
+            Grdtotal = 0;
         }
         private void BillBtn_Click(object sender, EventArgs e)
         {
@@ -178,7 +184,7 @@ namespace FP_kel4
             this.Hide();
         }
         int sId, sPrice, pos = 120 + 65;
-        string sName, cName, cTelp, cCar, cPlat, eName;
+        string sName, cName, cTelp, cCar, cPlat, eName,iDate;
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             cName = CustNameTb.Text;
@@ -186,13 +192,16 @@ namespace FP_kel4
             cPlat = CustPlatTb.Text;
             cCar = CustCarTb.Text;
             cTelp = CustPhoneTb.Text;
+            //iDate = Convert.ToString(TodayDate.Value.Date);
+            iDate = Convert.ToString(DateTime.Now);
 
             e.Graphics.DrawString("Cuci Mobil Kelompok 4", new Font("Century Gothic", 12, FontStyle.Bold), Brushes.Red, new Point(50));
-            e.Graphics.DrawString("Employee : " + eName, new Font("Century Gothic", 6, FontStyle.Bold), Brushes.Blue, new Point(26, 20+30));
-            e.Graphics.DrawString("Customer : " + cName, new Font("Century Gothic", 6, FontStyle.Bold), Brushes.Blue, new Point(26 , 50 + 30));
-            e.Graphics.DrawString("Telp     : " + cTelp, new Font("Century Gothic", 6, FontStyle.Bold), Brushes.Blue, new Point(26 , 70 + 30));
-            e.Graphics.DrawString("Mobil    : " + cCar, new Font("Century Gothic", 6, FontStyle.Bold), Brushes.Blue, new Point(130 + 42, 50 + 30));
-            e.Graphics.DrawString("NoPol    : " + cPlat, new Font("Century Gothic", 6, FontStyle.Bold), Brushes.Blue, new Point(130 + 42, 70 + 30));
+            e.Graphics.DrawString("Employee : " + eName, new Font("Century Gothic", 6, FontStyle.Bold), Brushes.Black, new Point(26, 20+30));
+            e.Graphics.DrawString("" + iDate, new Font("Century Gothic", 6, FontStyle.Bold), Brushes.Black, new Point(130+42, 20 + 30));
+            e.Graphics.DrawString("Customer : " + cName, new Font("Century Gothic", 6, FontStyle.Bold), Brushes.Black, new Point(26 , 50 + 30));
+            e.Graphics.DrawString("Telp     : " + cTelp, new Font("Century Gothic", 6, FontStyle.Bold), Brushes.Black, new Point(26 , 70 + 30));
+            e.Graphics.DrawString("Mobil    : " + cCar, new Font("Century Gothic", 6, FontStyle.Bold), Brushes.Black, new Point(130 + 42, 50 + 30));
+            e.Graphics.DrawString("NoPol    : " + cPlat, new Font("Century Gothic", 6, FontStyle.Bold), Brushes.Black, new Point(130 + 42, 70 + 30));
             e.Graphics.DrawString("************* Invoice *************", new Font("Century Gothic", 12, FontStyle.Bold), Brushes.Crimson, new Point(10, 107 +20));
             e.Graphics.DrawString("ID SERVIS                 HARGA", new Font("Century Gothic", 10, FontStyle.Bold), Brushes.Red, new Point(26 + 26,107 + 55));
             foreach (DataGridViewRow row in ServiceDGV.Rows)
@@ -210,7 +219,7 @@ namespace FP_kel4
             e.Graphics.DrawString("*********** Cuci Mobil ***********" , new Font("Century Gothic", 12, FontStyle.Bold), Brushes.Crimson, new Point(10, pos + 85));
 
         }
-
+        
         private void SaveBtn_Click(object sender, EventArgs e)
         {
             if (PriceTb.Text=="")

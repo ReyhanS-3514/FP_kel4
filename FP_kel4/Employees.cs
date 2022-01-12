@@ -34,6 +34,7 @@ namespace FP_kel4
             ENameTb.Text = "";
             EPhoneTb.Text = "";
             EGenCb.SelectedIndex = -1;
+            EGenCb.SelectedText = "Gender";
             EAddTb.Text = "";
             PassTb.Text = "";
         }
