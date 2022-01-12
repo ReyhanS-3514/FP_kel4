@@ -22,6 +22,7 @@ namespace FP_kel4
             ENamelbl.Text = Logins.Username;
             Reset();
             ServiceCb.SelectedText = "Service";
+            TodayDate.Value=DateTime.Now;
         }
 
         private void label13_Click(object sender, EventArgs e)
