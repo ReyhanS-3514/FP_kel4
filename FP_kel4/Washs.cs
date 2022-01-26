@@ -23,6 +23,7 @@ namespace FP_kel4
             Reset();
             ServiceCb.SelectedText = "Service";
             TodayDate.Value=DateTime.Now;
+            Grdtotal = 0;
         }
 
         private void label13_Click(object sender, EventArgs e)
